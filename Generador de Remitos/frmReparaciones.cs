@@ -88,6 +88,42 @@ namespace Generador_de_Remitos
 
         #region Eventos Botones
 
+        private void btnBuscarOrdenService_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtBuscarOrdenService.Text != string.Empty)
+                {
+                    dgvReparaciones.ClearSelection();
+
+                    foreach (DataGridViewRow fila in dgvReparaciones.Rows)
+                    {
+                        if (fila != null && fila.Cells["OrdenService"].Value != null)
+                        {
+                            if (fila.Cells["OrdenService"].Value.ToString() == txtBuscarOrdenService.Text)
+                            {
+                                fila.Cells["OrdenService"].Selected = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (dgvReparaciones.SelectedCells.Count == 0)
+                    {
+                        throw new Exception($"No hay ninguna Orden de Service con el numero: {txtBuscarOrdenService.Text}");
+                    }
+                }
+                else
+                {
+                    throw new Exception("No hay ninguna Orden de Service para buscar");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
             try
@@ -309,6 +345,8 @@ namespace Generador_de_Remitos
                 //Ordena desde la ultima Orden de service a la primera
                 dgvReparaciones.Sort(dgvReparaciones.Columns["OrdenService"], ListSortDirection.Descending);
 
+                dgvReparaciones.ClearSelection();
+
                 btnModificar.Enabled = false;
                 btnGarantia.Enabled = false;
                 btnRemito.Enabled = false;
@@ -320,6 +358,5 @@ namespace Generador_de_Remitos
         }
 
         #endregion
-
     }
 }
