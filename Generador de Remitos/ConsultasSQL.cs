@@ -50,22 +50,22 @@ namespace Generador_de_Remitos
             
         }
 
-        public void CargarEquipo(string ordenService, string tipo, string marca, string modelo, string accesorios, string motivo, string observaciones)
+        public void CargarEquipo(string ordenService, string marca, string modelo, string numSerie, string accesorios, string motivo, string observaciones)
         {
             try
             {
                 string storedProcedure = "P_Cargar_Equipo";
 
                 string pOrdenService = "@OrdenService";
-                string pTipo = "@Tipo";
                 string pMarca = "@Marca";
                 string pModelo = "@Modelo";
+                string pTipo = "@NumSerie";
                 string pAccesorios = "@Accesorios";
                 string pMotivo = "@Motivo";
                 string pObservaciones = "@Observaciones";
 
                 SqlParameter[] parametros = new SqlParameter[] { ordenService.ToString().ToSqlParameter(pOrdenService),
-                                                                 tipo.ToString().ToSqlParameter(pTipo),
+                                                                 numSerie.ToString().ToSqlParameter(pTipo),
                                                                  marca.ToString().ToSqlParameter(pMarca),
                                                                  modelo.ToString().ToSqlParameter(pModelo),
                                                                  accesorios.ToString().ToSqlParameter(pAccesorios),

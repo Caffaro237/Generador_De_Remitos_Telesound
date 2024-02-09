@@ -243,11 +243,6 @@ namespace Generador_de_Remitos
             OnLoad(EventArgs.Empty);
         }
 
-        private void lblOffline_Click(object sender, EventArgs e)
-        {
-            OnLoad(EventArgs.Empty);
-        }
-
         #endregion
 
         #region Metodos
