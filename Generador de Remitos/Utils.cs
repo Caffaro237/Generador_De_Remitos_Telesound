@@ -18,50 +18,37 @@ namespace Generador_de_Remitos
             Telefono
         }
 
-        public enum TipoEquipo
-        {
-            PC_Escritorio,
-            All_in_One,
-            Notebook,
-            Netbook,
-            Celular
-
-        }
-
         public enum Marca
         {
-            DELL,
-            ASUS,
-            Samsung,
-            Lenovo,
-            Positivo_BGH,
-            Toshiba,
-            HP,
-            Compaq,
-            Acer,
-            LG,
             Philips,
+            LG,
+            AOC,
+            Samsung,
+            Sony,
+            Hisense,
+            Panasonic,
+            TCL,
+            Hitachi,
+            RCA,
+            Sharp,
             Noblex,
             Top_House,
             Goldstar,
-            EXO
+            ViewSonic,
+            Daewoo,
+            Telefunken
         }
 
         public enum Accesorios
         {
-            Sin_accesorios,
-            Con_cargador,
-            Con_mouse,
-            Con_teclado,
-            Con_mouse_con_teclado,
-            Con_cable,
-            Con_caja,
-            Con_caja_con_cargador,
-            Con_remoto,
-            Con_remoto_con_cable,
-            En_bolsa,
-            En_bolsa_con_cargador
-
+            Sin_Accesorios,
+            Con_Cable,
+            Con_Remoto,
+            Con_Caja,
+            Con_Cable_Remoto,
+            Con_Cable_Remoto_Caja,
+            Con_Cargador,
+            Con_Remoto_con_Cable
         }
         
 

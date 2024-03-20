@@ -485,7 +485,7 @@
             this.MaximizeBox = false;
             this.Name = "frmRemito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reparaciones PC Master";
+            this.Text = "Telesound";
             this.Load += new System.EventHandler(this.Remito_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
